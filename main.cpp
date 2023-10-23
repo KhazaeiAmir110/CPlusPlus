@@ -1,28 +1,21 @@
 #include <iostream>
 using namespace std;
 int main(){
-    cout << "Please enter your Salary: ";
-    int salary,income=0,tax=0;
-    cin >> salary;
-    if (salary <= 1000){
-        income = salary* (10.0/100);
-        tax = salary-income;
-        cout << "Your income is: " << income << endl;
-        cout << "Your tax is: " << tax << endl;
-    } else if (salary > 1000 && salary <= 2000){
-        income = salary* (15.0/100);
-        tax = salary-income;
-        cout << "Your income is: " << income << endl;
-        cout << "Your tax is: " << tax << endl;
-    } else if (salary > 2000 && salary < 5000){
-        income = salary* (20.0/100);
-        tax = salary-income;
-        cout << "Your income is: " << income << endl;
-        cout << "Your tax is: " << tax << endl;
-    } else if (salary == 5000){
-        income = salary* (25.0/100);
-        tax = salary-income;
-        cout << "Your income is: " << income << endl;
-        cout << "Your tax is: " << tax << endl;
+//    while
+    int init = 10;
+    while (init > 0){
+        cout << init << endl;
+        --init;
     }
+    cout << "=========================" << endl;
+
+    int number, turn=1,total=0;
+    while (turn <= 3){
+        cout << "Please enter" << turn <<  "a number:";
+        cin >> number;
+        total += number;
+        turn++;
+    }
+    cout << "The wile loop is over!!" << endl;
+    cout << "Total is " << total << endl;
 }
