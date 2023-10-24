@@ -1,21 +1,23 @@
 #include <iostream>
 using namespace std;
 int main(){
-//    while
-    int init = 10;
-    while (init > 0){
-        cout << init << endl;
-        --init;
+    int number=10, counter=0;
+    cout << " Please Enter a number: ";
+//    cin >> number;
+    for (int i = 2; i < number; ++i) {
+        if (number % i == 0){
+            counter++;
+        }
     }
-    cout << "=========================" << endl;
-
-    int number, turn=1,total=0;
-    while (turn <= 3){
-        cout << "Please enter" << turn <<  "a number:";
-        cin >> number;
-        total += number;
-        turn++;
+    if (counter == 0){
+        cout << "The number is prime" << endl;
+    } else{
+        cout << "The number is not prime" << endl;
     }
-    cout << "The wile loop is over!!" << endl;
-    cout << "Total is " << total << endl;
+    cout << "===================================" << endl;
+//    do-while
+    do {
+        cout << "The number is: " << number << endl;
+        number--;
+    } while (number > 0);
 }
