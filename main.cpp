@@ -1,27 +1,31 @@
 #include <iostream>
 using namespace std;
 int main(){
-//    pointer
-    int firstvalue, secondvalue;
-    int * mypointer;
+    int myArray[21] = {0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100};
+    int * pointerarray;
+     pointerarray = myArray;
 
-    mypointer = &firstvalue;
-    *mypointer = 10;
-    cout << "firstvalue = " << firstvalue << endl;
+     cout <<  "The value of myArray is " << myArray << endl;
+     cout <<  "The value of pointerarray is " << *pointerarray << endl;
+     cout <<  "The value of myArray[0] is " << myArray[0] << endl;
+     cout <<  "The value of pointerarray[0] is " << pointerarray[0] << endl;
 
-    mypointer = &secondvalue;
-    *mypointer = 20;
-    cout << "secondvalue = " << secondvalue << endl;
+    for (int i = 0; i < 21; ++i) {
+        cout << "myArray[" << i << "] : " << myArray[i] << endl;
+    }
+
+//     ================================================================
+
+     int * pointerarray2;
+     pointerarray2 = myArray;
+     *pointerarray2 = 1000;
+     pointerarray2++;
+     *pointerarray2 = 2000;
+     pointerarray2++;
+     *pointerarray2 = 3000;
+    for (int i = 0; i < 21; ++i) {
+            cout << "myArray[" << i << "] : " << myArray[i] << endl;
+    }
 
 
-    int value_1=5, value_2=10, *p1, *p2;
-    p1=&value_1;
-    p2=&value_2;
-    cout<<"value_1="<<value_1<<endl;
-    cout<<"value_2="<<value_2<<endl;
-    *p1=*p2=15;
-    cout<<"new value_1="<<value_1<<endl;
-    cout<<"new value_2="<<value_2<<endl;
-    return 0;
-
-}
+};
