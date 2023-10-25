@@ -1,26 +1,27 @@
 #include <iostream>
 using namespace std;
 int main(){
-//    Multidimensional array
-    int matrix[3][3] = {
-            {1, 2, 3},
-            {3, 4, 5},
-            {5, 6, 7}
-    };
-    int sum=0;
-//    print index [1][1]
-    cout << "matrix[1][1] : " <<  matrix[1][1] << endl;
-//  print index [x][y]
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            cout << "matrix[" << i << "][" << j << "] : " << matrix[i][j] << endl;
-//            matrix[i][j] => i=j
-            if (i==j){
-                cout << "(i)" << i << "=" << "(j)" << j <<  endl;
-                sum+=matrix[i][j];
-            }
-        }
-    }
-    cout <<  "sum : " << sum << endl;
+//    pointer
+    int firstvalue, secondvalue;
+    int * mypointer;
+
+    mypointer = &firstvalue;
+    *mypointer = 10;
+    cout << "firstvalue = " << firstvalue << endl;
+
+    mypointer = &secondvalue;
+    *mypointer = 20;
+    cout << "secondvalue = " << secondvalue << endl;
+
+
+    int value_1=5, value_2=10, *p1, *p2;
+    p1=&value_1;
+    p2=&value_2;
+    cout<<"value_1="<<value_1<<endl;
+    cout<<"value_2="<<value_2<<endl;
+    *p1=*p2=15;
+    cout<<"new value_1="<<value_1<<endl;
+    cout<<"new value_2="<<value_2<<endl;
     return 0;
+
 }
