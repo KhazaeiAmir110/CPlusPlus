@@ -1,19 +1,26 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int myArray[10] = {1,3,5,7,9,11,13,15,17,19};
-//    index array
-    cout <<  "myArray[0] = " << myArray[0] << endl;
-    cout <<  "myArray[5] = " << myArray[5] << endl;
-//    chang array
-    myArray[5] = 100;
-    cout << "myArray[5] , change = " << myArray[5] << endl;
-
-//    for
-    int total=0;
-    for (int i = 0; i < 10; i++){
-        cout << "myArray[" << i << "] = " << myArray[i] << endl;
-        total+=myArray[i];
-    }cout << "Total : " << total << endl;
+//    Multidimensional array
+    int matrix[3][3] = {
+            {1, 2, 3},
+            {3, 4, 5},
+            {5, 6, 7}
+    };
+    int sum=0;
+//    print index [1][1]
+    cout << "matrix[1][1] : " <<  matrix[1][1] << endl;
+//  print index [x][y]
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cout << "matrix[" << i << "][" << j << "] : " << matrix[i][j] << endl;
+//            matrix[i][j] => i=j
+            if (i==j){
+                cout << "(i)" << i << "=" << "(j)" << j <<  endl;
+                sum+=matrix[i][j];
+            }
+        }
+    }
+    cout <<  "sum : " << sum << endl;
     return 0;
 }
