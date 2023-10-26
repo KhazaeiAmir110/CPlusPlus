@@ -1,14 +1,8 @@
 #include <iostream>
 using namespace std;
-int mySum(int a, int b){
-    cout << "sum a , b : " << a + b << endl;
+void printName(string name){
+    cout << "This name : "<< name << endl;
 }
-
-void sayHello(){
-    cout << "Hello World!" << endl;
-}
-
 int main(){
-    mySum(1, 2);
-    sayHello();
+    printName("John");
 }
