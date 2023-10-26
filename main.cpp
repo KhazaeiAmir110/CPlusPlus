@@ -1,8 +1,18 @@
 #include <iostream>
 using namespace std;
-void printName(string name){
-    cout << "This name : "<< name << endl;
+long fact(int n){
+    if (n == 1){
+        return 1;
+    }
+    else if (n > 1){
+        return (n * fact(n-1));
+    }
 }
 int main(){
-    printName("John");
+    cout << "Please enter number : ";
+    int number;
+    long result=0;
+    cin >> number;
+    result = fact(number);
+    cout << "Result is : " << result << endl;
 }
