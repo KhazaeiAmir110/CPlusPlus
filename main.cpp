@@ -1,18 +1,17 @@
 #include <iostream>
 using namespace std;
-long fact(int n){
-    if (n == 1){
-        return 1;
+int array[] = {1,2,3,4,5,6,7,8,9,10};
+
+void printArray(int array[], int size) {
+    for (int i = 0; i < size; i++) {
+//        spase
+        cout << array[i] << " ";
     }
-    else if (n > 1){
-        return (n * fact(n-1));
-    }
+    cout << endl;
 }
+
 int main(){
-    cout << "Please enter number : ";
-    int number;
-    long result=0;
-    cin >> number;
-    result = fact(number);
-    cout << "Result is : " << result << endl;
+    printArray(array,sizeof(array) / sizeof(int));
+// size array
+    cout <<"size array : " <<  sizeof(array) / sizeof(int) << endl;
 }
