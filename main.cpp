@@ -1,17 +1,21 @@
 #include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <cmath>
+#include <climits>
+#include <math.h>
+#include <set>
+#include <unordered_map>
+#include <unordered_set>
+
 using namespace std;
-int array[] = {1,2,3,4,5,6,7,8,9,10};
 
-void printArray(int array[], int size) {
-    for (int i = 0; i < size; i++) {
-//        spase
-        cout << array[i] << " ";
-    }
-    cout << endl;
-}
+#define PI 3.14159265358979323846
+#define epsilon 0.000000001
+#define INF 1000000000000000000
+#define MOD 1000000007
 
-int main(){
-    printArray(array,sizeof(array) / sizeof(int));
-// size array
-    cout <<"size array : " <<  sizeof(array) / sizeof(int) << endl;
-}
+int N, K, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, ans;
+long long int dp[1000010];
