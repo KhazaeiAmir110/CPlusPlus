@@ -1,14 +1,22 @@
 #include <iostream>
 using namespace std;
 
-class Car{
+class Employee{
+    private:
+        int salary;
     public:
-    static void beep(){
-        cout << "beep beep" << endl;
-    }
+//        setter
+        void setSalary(int s){
+            salary = s;
+        }
+//        getter
+        int getSalary(){
+            return salary;
+        }
 };
 
 int main(){
-    Car c1;
-    c1.beep();
+    Employee e;
+    e.setSalary(1000);
+    cout<<e.getSalary()<<endl;
 }
