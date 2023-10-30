@@ -3,4 +3,4 @@ project(CPlusPlus)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPlusPlus main.cpp kalameh.cpp kamel.cpp Square.cpp print.cpp)
+add_executable(CPlusPlus main.cpp quera/kalameh.cpp quera/kamel.cpp quera/Square.cpp quera/print.cpp)
