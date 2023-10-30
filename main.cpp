@@ -2,12 +2,17 @@
 using namespace std;
 
 class Employee{
+//    contractor
+public:
+    Employee(int z){
+        salary = z;
+    }
     private:
         int salary;
     public:
 //        setter
         void setSalary(int s){
-            salary = s;
+            salary += s;
         }
 //        getter
         int getSalary(){
@@ -16,7 +21,7 @@ class Employee{
 };
 
 int main(){
-    Employee e;
+    Employee e(1000);
     e.setSalary(1000);
     cout<<e.getSalary()<<endl;
 }
